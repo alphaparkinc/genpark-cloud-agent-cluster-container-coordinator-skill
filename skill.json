@@ -1,0 +1,35 @@
+{
+  "name": "genpark-cloud-agent-cluster-container-coordinator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Cloud-hosted multi-LLM agent cluster coordinator, container sandbox & load balancer.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "agent-cluster",
+    "container-sandbox",
+    "load-balancer",
+    "cloud-agents",
+    "ph-august-monthly"
+  ],
+  "inputs": {
+    "agent_job_spec": {
+      "type": "object"
+    },
+    "max_concurrency": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "allocated_cluster_id": {
+      "type": "string"
+    },
+    "active_workers_count": {
+      "type": "integer"
+    },
+    "dispatch_status": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
